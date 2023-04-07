@@ -12,7 +12,7 @@ def solution(p: float, x: np.array) -> tuple:
     # Не меняйте название функции и её аргументы
     alpha = 1 - p
     df = 2 * len(x)
-    r2 = np.dot(x, x) ** 0.5
+    r2 = sum(x ** 0.5)
     z1 = chi2.ppf(alpha / 2, df)
     z2 = chi2.ppf(1 - alpha / 2, df)
     left = (r2 / (13 * z2))**0.5
